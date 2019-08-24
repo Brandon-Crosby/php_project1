@@ -70,15 +70,15 @@ function printQuote($array){
 global $quotes;
 $This_quote = getRandomQuote($quotes);
 
-year$HTML_quote = " ";
-$HTML_quote .= <p class="quote"> . $This_quote["quote"] . "</p>";
-$HTML_quote .= <p class="quote"> .
+$HTML_quote = " ";
+$HTML_quote .= "<p class="quote">" . $This_quote["quote"] . "</p>";
+$HTML_quote .= "<p class="quote">" .
 
 if $This_quote['year']{
-  $HTML_quote.= <span class='year'> . $This_quote["year"] . "</span>"
+  $HTML_quote.= "<span class='year'>" . $This_quote["year"] . "</span>"
 }
 if $This_quote['tags']{
-  $HTML_quote.= <span class='tags'> . $This_quote["tags"] . "</span>"
+  $HTML_quote.= "<span class='tags'>" . $This_quote["tags"] . "</span>"
 }
 
 $This_quote["author"] .= "</p>"
