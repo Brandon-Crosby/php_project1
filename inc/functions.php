@@ -9,38 +9,38 @@ $quotes = array(
 
 [
     'quote' =>  "Don't be sad it's over, be happy it happened "  ,
-    'author' => ' - Dr. Seuss'  ,
-    //'source' =>   ,
+    'source' => ' - Dr. Seuss'  ,
+    'year' =>   ,
     'tags'=>  'Inspirational'     ,
 ],
 [
       'quote' =>  'Be yourself, everyone is already taken'  ,
-      'author' =>  ' - Oscar Wilde' ,
-      //'source' =>   ,
+      'source' =>  ' - Oscar Wilde' ,
+      'year' =>   ,
       'tags'=>   'Inspirational'    ,
 ],
 [
       'quote' =>  'Be the change that you wish to see in the world'  ,
-      'author' =>  ' - Gandhi' ,
-      //'source' =>   ,
+      'source' =>  ' - Gandhi' ,
+      'year' =>   ,
       'tags'=>      'Inspirational' ,
 ],
 [
       'quote' =>  'It is never to late to be what you might have been'  ,
-      'author' => ' - George Eliot'  ,
-      //'source' =>   ,
+      'source' => ' - George Eliot'  ,
+      'year' =>   ,
       'tags'=>      'Inspirational' ,
 ],
 [
       'quote' =>   'Everything you can imagine is real' ,
-      'author' =>   'Pablo Escobar',
-      //'source' =>   ,
+      'source' =>   'Pablo Escobar',
+      'year' =>   ,
       'tags'=>     'Inspirational'  ,
 ],
 [
       'quote' =>   'Talk is cheap. Show me the code' ,
-      'author' =>   'Linus Torvalds',
-      //'source' =>   ,
+      'source' =>   'Linus Torvalds',
+      'year' =>   ,
       'tags'=>     'Inspirational'  ,
 ],
 );
@@ -66,14 +66,31 @@ return $quote;
 
 // Create the printQuote funtion and name it printQuote
 
-function printQuote(){
+function printQuote($array){
 global $quotes;
+$This_quote = getRandomQuote($quotes);
+
+year$HTML_quote = " ";
+$HTML_quote .= <p class="quote"> . $This_quote["quote"] . "</p>";
+$HTML_quote .= <p class="quote"> .
+
+if $This_quote['year']{
+  $HTML_quote.= <span class='year'> . $This_quote["year"] . "</span>"
+}
+if $This_quote['tags']{
+  $HTML_quote.= <span class='tags'> . $This_quote["tags"] . "</span>"
+}
+
+$This_quote["author"] .= "</p>"
+echo $HTML_quote;
+};
 
 
 
 
 
-//};
+
+//background color
 
 
 
@@ -85,4 +102,4 @@ global $quotes;
 
 
 
-?>
+source
