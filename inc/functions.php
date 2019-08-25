@@ -10,37 +10,37 @@ $quotes = array(
 [
     'quote' =>  "Don't be sad it's over, be happy it happened "  ,
     'source' => ' - Dr. Seuss'  ,
-    'year' =>   ,
+    'year' => '',
     'tags'=>  'Inspirational'     ,
 ],
 [
       'quote' =>  'Be yourself, everyone is already taken'  ,
       'source' =>  ' - Oscar Wilde' ,
-      'year' =>   ,
+      'year' =>  '' ,
       'tags'=>   'Inspirational'    ,
 ],
 [
       'quote' =>  'Be the change that you wish to see in the world'  ,
       'source' =>  ' - Gandhi' ,
-      'year' =>   ,
+      'year' => ''  ,
       'tags'=>      'Inspirational' ,
 ],
 [
       'quote' =>  'It is never to late to be what you might have been'  ,
       'source' => ' - George Eliot'  ,
-      'year' =>   ,
+      'year' => ''  ,
       'tags'=>      'Inspirational' ,
 ],
 [
       'quote' =>   'Everything you can imagine is real' ,
       'source' =>   'Pablo Escobar',
-      'year' =>   ,
+      'year' => ''  ,
       'tags'=>     'Inspirational'  ,
 ],
 [
       'quote' =>   'Talk is cheap. Show me the code' ,
       'source' =>   'Linus Torvalds',
-      'year' =>   ,
+      'year' => ''  ,
       'tags'=>     'Inspirational'  ,
 ],
 );
@@ -71,14 +71,14 @@ global $quotes;
 $This_quote = getRandomQuote($quotes);
 
 $HTML_quote = " ";
-$HTML_quote .= "<p class="quote">" . $This_quote["quote"] . "</p>";
-$HTML_quote .= "<p class="quote">" .
+$HTML_quote .= "<p class='quote'>" . $This_quote['quote'] . "</p>";
+$HTML_quote .= "<p class='quote'>" .
 
-if $This_quote['year']{
-  $HTML_quote.= "<span class='year'>" . $This_quote["year"] . "</span>"
+if ($This_quote['year']){
+  $HTML_quote .= "<span class='year'>" . $This_quote['year'] . "</span>"
 }
-if $This_quote['tags']{
-  $HTML_quote.= "<span class='tags'>" . $This_quote["tags"] . "</span>"
+if ($This_quote['tags']){
+  $HTML_quote .= "<span class='tags'>" . $This_quote["tags"] . "</span>"
 }
 
 $This_quote["author"] .= "</p>"
