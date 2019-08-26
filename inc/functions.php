@@ -66,24 +66,26 @@ return $quote;
 
 // Create the printQuote funtion and name it printQuote
 
-function printQuote($array){
+function printQuote(){
 global $quotes;
 $This_quote = getRandomQuote($quotes);
 
 $HTML_quote = '';
 $HTML_quote .= '<p class="quote">'. $This_quote['quote'] . '</p>';
-$HTML_quote .= '<p class="quote">' .
-
-$This_quote['source'] .
-'<span class="year">' . $This_quote['year'] . '</span>' .
-'<span class="tags">' . $This_quote['tags'] . '</span> </p>';
-
-if ($This_quote['year']&&['tags'] == Null){
+$HTML_quote .= '<p class="source">' . $This_quote['source'] ;
+//'<span class="year">' . $This_quote['year'] . '</span>' .
+//'<span class="tags">' . $This_quote['tags'] . '</span> </p>';
+if ($This_quote['year']){
+$HTML_quote .= '<span class="year">' . $This_quote["year"] . '</span>';
+}
+if ($This_quote['tags']){
+$HTML_quote .= '<span class="tags">' . $This_quote["tags"] . '</span>';
+}
+/*if ($This_quote['year']&&['tags'] == Null){
 $HTML_quote .= '<p class="quote">' . $This_quote['quote'] . '</p>';
 $HTML_quote .= '<p class="quote">' . $This_quote['source'] . '</p>' ;
-
-}
-
+}*/
+$HTML_quote .= '</p>';
 echo $HTML_quote;
 }
 
@@ -97,7 +99,7 @@ echo $HTML_quote;
 
 
 
-
+?>
 
 
 
