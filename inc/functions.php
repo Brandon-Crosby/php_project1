@@ -40,7 +40,7 @@ $quotes = array(
 [
       'quote' =>   'Talk is cheap. Show me the code' ,
       'source' =>   'Linus Torvalds',
-      'year' => ''  ,
+      'year' => '2000 '  ,
       'tags'=>     'Inspirational'  ,
 ],
 );
@@ -70,20 +70,23 @@ function printQuote($array){
 global $quotes;
 $This_quote = getRandomQuote($quotes);
 
-$HTML_quote = " ";
-$HTML_quote .= "<p class='quote'>" . $This_quote['quote'] . "</p>";
-$HTML_quote .= "<p class='quote'>" .
+$HTML_quote = '';
+$HTML_quote .= '<p class="quote">'. $This_quote['quote'] . '</p>';
+$HTML_quote .= '<p class="quote">' .
 
-if ($This_quote['year']){
-  $HTML_quote .= "<span class='year'>" . $This_quote['year'] . "</span>"
-}
-if ($This_quote['tags']){
-  $HTML_quote .= "<span class='tags'>" . $This_quote["tags"] . "</span>"
+$This_quote['source'] .
+'<span class="year">' . $This_quote['year'] . '</span>' .
+'<span class="tags">' . $This_quote['tags'] . '</span> </p>';
+
+if ($This_quote['year']&&['tags'] == Null){
+$HTML_quote .= '<p class="quote">' . $This_quote['quote'] . '</p>';
+$HTML_quote .= '<p class="quote">' . $This_quote['source'] . '</p>' ;
+
 }
 
-$This_quote["author"] .= "</p>"
 echo $HTML_quote;
-};
+}
+
 
 
 
