@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php include("inc/functions.php");?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,10 +9,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body style= "background-color: : <?php echo $colorChange; ?>">
   <div class="container">
     <div id="quote-box">
-      <?php printQuote($array); ?>
+    <?php printQuote($array); ?>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
